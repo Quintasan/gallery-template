@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "HTTP server",
+            "type": "shell",
+            "command": "./http --index --compress gzip",
+            "problemMatcher": []
+        }
+    ]
+}
