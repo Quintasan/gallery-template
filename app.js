@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // hide map overlay when clicking anywhere
   document.querySelectorAll(".map").forEach((mapOverlay) => {
     mapOverlay.addEventListener("click", () => {
-      ["display-none", "fadein"].forEach(klass => {
+      ["display-none"].forEach(klass => {
         mapOverlay.classList.toggle(klass);
       });
     })
