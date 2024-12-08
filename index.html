@@ -15,50 +15,71 @@
       <h1>Hello, world!</h1>
     </header>
     <main>
+      <svg style="display: none;">
+        <symbol id="circle-xmark" preserveAspectRatio="none" viewBox="0 0 24 24"><path d="m15.707,9.707l-2.293,2.293,2.293,2.293c.391.391.391,1.023,0,1.414-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-2.293-2.293-2.293,2.293c-.195.195-.451.293-.707.293s-.512-.098-.707-.293c-.391-.391-.391-1.023,0-1.414l2.293-2.293-2.293-2.293c-.391-.391-.391-1.023,0-1.414s1.023-.391,1.414,0l2.293,2.293,2.293-2.293c.391-.391,1.023-.391,1.414,0s.391,1.023,0,1.414Zm8.293,2.293c0,6.617-5.383,12-12,12S0,18.617,0,12,5.383,0,12,0s12,5.383,12,12Zm-2,0c0-5.514-4.486-10-10-10S2,6.486,2,12s4.486,10,10,10,10-4.486,10-10Z"/></symbol>
+        <symbol id="info" preserveAspectRatio="none" viewBox="0 0 24 24"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z"/><circle cx="12" cy="6.5" r="1.5"/></symbol>
+      </svg>
+
       <section class="gallery">
         <figure class="photo">
           <img
             loading="lazy"
+            class="thumbnail"
             src="photo-small.jpg"
             srcset="photo-medium.jpg 800w, photo-large.jpg 1920w, photo-xl.jpg 2560w, photo-2xl.jpg 3840w"
             alt=""
           >
 
-          <div class="overlay display-none" style="background-image: url(photo-thumbhash.webp); background-size: cover;">
-            <div class="overlay-container">
-              <a class="details" href="#">DETAILS</a>
-              <a class="back" href="#">BACK</a>
-              <img loading="lazy" class="overlay-photo" src="photo.jpg" alt="">
+          <div class="overlay hidden" style="background-image: url(photo-thumbhash.webp); background-size: cover;">
+            <div class="image-box">
+              <button class="details">
+                <svg class="icon"><use href="#info" /></svg>
+              </button>
+              <button class="back">
+                <svg class="icon"><use href="#circle-xmark" /></svg>
+              </button>
+              <img loading="lazy" class="contain-image" src="photo.jpg" alt="">
             </div>
           </div>
 
-          <div class="overlay closed map display-none">
+          <div class="overlay hidden map" style="background-image: url(photo-thumbhash.webp); background-size: cover;">
             <div class="overlay-container">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.openstreetmap.org/query?mlat=-38.36514&mlon=144.90693#map=16/-38.3648/144.9093">
-                <img loading="lazy" class="overlay-photo" src="https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=1280&height=720&zoom=14&marker=lonlat:-122.32932814581102,47.528574233508266;color:%23ff0000;size:medium&scaleFactor=2&apiKey=ab4fd4ff96df437badcfc1029ffeee27" />
-              </a>
+              <h1>Photo title</h1>
+              <p>Photo description</p>
+              <br>
+              <h1>Location</h1>
+              <img loading="lazy" class="overlay-map" src="https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=1280&height=720&zoom=14&marker=lonlat:-122.32932814581102,47.528574233508266;color:%23ff0000;size:medium&scaleFactor=2&apiKey=ab4fd4ff96df437badcfc1029ffeee27" />
+              <br>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.openstreetmap.org/query?mlat=-38.36514&mlon=144.90693#map=16/-38.3648/144.9093">View on OpenStreetMap</a>
             </div>
           </div>
         </figure>
+
         <figure class="photo">
           <img
             loading="lazy"
+            class="thumbnail"
             src="photo-small.jpg"
-            srcsrt="photo-medium.jpg 800w, photo-large.jpg 1920w, photo-xl.jpg 2560w, photo-2xl.jpg 3840w"
+            srcset="photo-medium.jpg 800w, photo-large.jpg 1920w, photo-xl.jpg 2560w, photo-2xl.jpg 3840w"
             alt=""
           >
 
-          <div class="overlay display-none" style="background-image: url(photo.jpg);">
-            <div class="overlay-container" style="backdrop-filter: blur(40px);">
-              <a class="details" href="#">DETAILS</a>
-              <a class="back" href="#">BACK</a>
-              <img loading="lazy" class="overlay-photo" src="photo.jpg" alt="">
+          <div class="overlay hidden" style="background-image: url(photo-thumbhash.webp); background-size: cover;">
+            <div class="image-box">
+              <button class="details" >DETAILS</button>
+              <button class="back" >BACK</button>
+              <img loading="lazy" class="contain-image" src="photo.jpg" alt="">
             </div>
           </div>
 
-          <div class="overlay closed map display-none">
+          <div class="overlay hidden map" style="background-image: url(photo-thumbhash.webp); background-size: cover;">
             <div class="overlay-container">
+              <h1>Photo title</h1>
+              <p>Photo description</p>
+              <br>
+              <h1>Location</h1>
               <img loading="lazy" class="overlay-map" src="https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=1280&height=720&zoom=14&marker=lonlat:-122.32932814581102,47.528574233508266;color:%23ff0000;size:medium&scaleFactor=2&apiKey=ab4fd4ff96df437badcfc1029ffeee27" />
+              <br>
               <a target="_blank" rel="noopener noreferrer" href="https://www.openstreetmap.org/query?mlat=-38.36514&mlon=144.90693#map=16/-38.3648/144.9093">View on OpenStreetMap</a>
             </div>
           </div>
@@ -73,10 +94,6 @@
         Michał Zając. All Rights Reserved.
       </small>
     </footer>
-    <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-      ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   // show overlay when clicking on the photo
-  document.querySelectorAll(".gallery > figure").forEach((element) => {
+  document.querySelectorAll(".thumbnail").forEach((element) => {
     element.addEventListener("click", () => {
-      const overlay = element.querySelector(".overlay");
-      overlay.classList.toggle("display-none");
+      const overlay = element.parentElement.querySelector(".overlay");
+      overlay.classList.replace("hidden", "visible");
+    });
+  });
+
+  document.querySelectorAll(".back").forEach((closeButton) => {
+    closeButton.addEventListener("click", () => {
+      let overlay = closeButton.closest(".visible");
+      overlay.classList.replace("visible", "hidden");
     });
   });
 
@@ -12,16 +19,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     element.addEventListener("click", () => {
       const figure = element.closest("figure");
       const mapOverlay = figure.querySelector(".map");
-      mapOverlay.classList.toggle("display-none");
+      mapOverlay.classList.replace("hidden", "visible")
     });
   });
 
   // hide map overlay when clicking anywhere
   document.querySelectorAll(".map").forEach((mapOverlay) => {
     mapOverlay.addEventListener("click", () => {
-      ["display-none"].forEach(klass => {
-        mapOverlay.classList.toggle(klass);
-      });
+      mapOverlay.classList.replace("visible", "hidden")
     })
   });
 });
