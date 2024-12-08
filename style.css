@@ -37,9 +37,28 @@
   background: rgb(255, 0, 0);
 }
 
+.map > .overlay-container {
+  text-align: center;
+}
+
 .details {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  background-color: rgba(255, 255, 255);
+  border-style: solid;
+  border-radius: 15px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.back {
+  background-color: rgba(255, 255, 255);
+  border-style: solid;
+  border-radius: 15px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 .overlay-container {
@@ -54,7 +73,14 @@
   width: 80%;
   object-fit: contain;
   object-position: center;
-  max-height: 95%;
+  max-height: 100%;
+}
+
+.overlay-map {
+  width: 80%;
+  object-fit: contain;
+  object-position: center;
+  max-height: 60%;
 }
 
 .display-none {

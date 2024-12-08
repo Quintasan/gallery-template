@@ -17,20 +17,49 @@
     <main>
       <section class="gallery">
         <figure class="photo">
-          <img src="photo.jpg" alt="">
+          <img
+            loading="lazy"
+            src="photo-small.jpg"
+            srcset="photo-medium.jpg 800w, photo-large.jpg 1920w, photo-xl.jpg 2560w, photo-2xl.jpg 3840w"
+            alt=""
+          >
 
-	        <div class="overlay display-none" style="background-image: url(photo.jpg);">
-            <div class="overlay-container" style="backdrop-filter: blur(40px);">
+          <div class="overlay display-none" style="background-image: url(photo-thumbhash.webp); background-size: cover;">
+            <div class="overlay-container">
               <a class="details" href="#">DETAILS</a>
+              <a class="back" href="#">BACK</a>
               <img loading="lazy" class="overlay-photo" src="photo.jpg" alt="">
             </div>
-	        </div>
+          </div>
 
           <div class="overlay closed map display-none">
             <div class="overlay-container">
               <a target="_blank" rel="noopener noreferrer" href="https://www.openstreetmap.org/query?mlat=-38.36514&mlon=144.90693#map=16/-38.3648/144.9093">
                 <img loading="lazy" class="overlay-photo" src="https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=1280&height=720&zoom=14&marker=lonlat:-122.32932814581102,47.528574233508266;color:%23ff0000;size:medium&scaleFactor=2&apiKey=ab4fd4ff96df437badcfc1029ffeee27" />
               </a>
+            </div>
+          </div>
+        </figure>
+        <figure class="photo">
+          <img
+            loading="lazy"
+            src="photo-small.jpg"
+            srcsrt="photo-medium.jpg 800w, photo-large.jpg 1920w, photo-xl.jpg 2560w, photo-2xl.jpg 3840w"
+            alt=""
+          >
+
+          <div class="overlay display-none" style="background-image: url(photo.jpg);">
+            <div class="overlay-container" style="backdrop-filter: blur(40px);">
+              <a class="details" href="#">DETAILS</a>
+              <a class="back" href="#">BACK</a>
+              <img loading="lazy" class="overlay-photo" src="photo.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="overlay closed map display-none">
+            <div class="overlay-container">
+              <img loading="lazy" class="overlay-map" src="https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=1280&height=720&zoom=14&marker=lonlat:-122.32932814581102,47.528574233508266;color:%23ff0000;size:medium&scaleFactor=2&apiKey=ab4fd4ff96df437badcfc1029ffeee27" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.openstreetmap.org/query?mlat=-38.36514&mlon=144.90693#map=16/-38.3648/144.9093">View on OpenStreetMap</a>
             </div>
           </div>
         </figure>
@@ -44,6 +73,10 @@
         Michał Zając. All Rights Reserved.
       </small>
     </footer>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
