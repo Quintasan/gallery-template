@@ -105,6 +105,13 @@ html {
   max-height: 60%;
 }
 
+button.back, button.close, button.details {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .image-box {
   position: relative;
   width: 100%;
@@ -112,13 +119,6 @@ html {
   max-width: max-content;
   max-height: 100%;
   margin: 0 auto;
-
-  button {
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-  }
 
   .details {
     position: absolute;
