@@ -74,8 +74,6 @@ html {
   bottom: 0;
   right: 0;
   padding: 1rem;
-  background: rgba(0, 0, 0, 1);
-  color: #ffffff;
   opacity: 0;
   transition: all ease-in-out 1s;
 }
@@ -141,6 +139,20 @@ button.back, button.close, button.details {
 .visible {
   opacity: 1;
   visibility: visible;
+}
+
+@media(prefers-color-scheme: light) {
+  body {
+    background: #FFFFFF;
+    color: #000000;
+  }
+}
+
+@media(prefers-color-scheme: dark) {
+  body {
+    background: #000000;
+    color: #FFFFFF;
+  }
 }
 
 @media (orientation:portrait) {
