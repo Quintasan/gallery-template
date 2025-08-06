@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   });
 
+  // close the overlay when clicking on the back button
   document.querySelectorAll(".back").forEach((closeButton) => {
     closeButton.addEventListener("click", () => {
       let overlay = closeButton.closest(".visible");
